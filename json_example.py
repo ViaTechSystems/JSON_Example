@@ -5,26 +5,26 @@ STRING_JSON_FROM_DB_EXAMPLE = "{\
 	'customField3': 'Residents'\
 }"
 
-print(type(STRING_JSON_FROM_DB_EXAMPLE))		 		# oviously string
+print(type(STRING_JSON_FROM_DB_EXAMPLE))		# oviously string
 
-example_dict = eval(STRING_JSON_FROM_DB_EXAMPLE) 		# one line for conversion to dict
+example_dict = eval(STRING_JSON_FROM_DB_EXAMPLE) 	# one line for conversion to dict
 
-print(type(example_dict))						 		# now a Python Dict
+print(type(example_dict))				# now a Python Dict
 
-print(example_dict.get('customField1'))					# will be 'Unit Number'
+print(example_dict.get('customField1'))			# will be 'Unit Number'
 
 # ------------------------------
 # now let's change the dict and turn it back to a string to save back to DB
 
-example_dict.update({'customField1': 'Changed'})		# update field in dict
+example_dict.update({'customField1': 'Changed'})	# update field in dict
 
-print(example_dict.get('customField1'))					# will be 'Changed'
+print(example_dict.get('customField1'))			# will be 'Changed'
 
-json_string_for_db = json.dumps(example_dict)			# dump JSON back to string
+json_string_for_db = json.dumps(example_dict)		# dump JSON back to string
 
-print(type(json_string_for_db))							# type string
+print(type(json_string_for_db))				# type string
 
-print(json_string_for_db)								# show changed JSON string from start that goes in DB
+print(json_string_for_db)				# show changed JSON string from start that goes in DB
 # ------------------------------
 
 # these were all tests showing data types and conversions
