@@ -1,5 +1,3 @@
-import json
-
 #imagine this is a custom string gathered from a DB
 STRING_JSON_FROM_DB_EXAMPLE = "{\
 	'customField1': 'Unit Number',\
